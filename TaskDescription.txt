@@ -1,0 +1,40 @@
+Yii2 task Description
+
+Framework: YII 
+>> Done
+
+CRUD operation for user table
+>> Done 
+
+user table has user_id, user_name, user_email, user_mobile_no, user_type (admin, user, employee), created_at, updated_at, user_status
+>> Done
+
+by default, a user has an inactive status
+>> Done
+
+on sign-up activation link send to user email (in demo task just create a link, do not send actual mail)
+>> Done, When account has been created, Admin have rights to activate the user account, so for that admin need to visit the view page and they will find a button.
+
+also, on sign up send OTP on user's mobile (in the demo task just enter 1234 and validate that)
+>> Not started the work
+
+after activation of the user and validate OTP, now user can log in
+>> Not started the work
+
+user permission
+admin user can do all actions like create, update, delete, and block/unblock the user
+>> Admin has the access to update, delete the user. Soft validation just hide that part.
+
+only registered users can do only update and view their own profile
+ on all events (create, update, delete, and all) need to display a success or error message
+ 
+>> Done this part need to display a success or error message
+
+
+Username and Password:
+admin / admin
+cord4 / cord4
+
+Also Please find the attached SQL file.
+
+FYI: Due to medical emergency I've not started some points. Therefore I've taken around 5 hrs to perform above tasks. 

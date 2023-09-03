@@ -15,10 +15,14 @@ $this->params['breadcrumbs'][] = $this->title;
 $userStatus = array(0 => "Inactive", 1 => "Active");
 $isLoggedId = false;
 $loginUserData = array();
-
+$isAdmin = false;
 if(array_key_exists('cord4',$_SESSION)){
         $loginUserData = $_SESSION['cord4']; //we can make it dynamic so no need to store everytime
         $isLoggedId = true;
+        /** we can take constant instead of 1 */
+        if($loginUserData['user_type'] == 1){
+            $isAdmin = true;
+        }
 }
 
 ?>
@@ -46,13 +50,13 @@ if(array_key_exists('cord4',$_SESSION)){
                     return $userStatus[$model->user_status];
                 },
             ],
-            $isLoggedId ? 
+            $isAdmin ? 
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, UserTbl $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'user_id' => $model->user_id]);
                  }
-            ] : ['visible' => $isLoggedId,],
+            ] : ['visible' => $isAdmin,],
         ],
     ]); ?>
 
