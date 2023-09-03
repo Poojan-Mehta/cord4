@@ -32,7 +32,8 @@ if(array_key_exists('cord4',$_SESSION)){
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?php
-        if(($isAdmin && isset($model->accessToken) && !empty($model->accessToken)){
+        /** only admin can activate user account */
+        if($isAdmin && !empty($model->accessToken)){
             echo '<div>'. Html::a('Click here to activate this account', ['/user-tbl/activation', 'user_id' => $model->user_id, 'accessToken' => $model->accessToken], ['class' => 'btn btn-primary']).'</div>';
         }
 

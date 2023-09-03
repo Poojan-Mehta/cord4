@@ -45,9 +45,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <?php ActiveForm::end(); ?>
 
-            <!-- <div style="color:#999;">
-                You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-            </div> -->
+            <div style="color:#999;">
+                You may login with <strong>admin/admin</strong> to activate the user account.<br>
+            </div>
 
         </div>
     </div>

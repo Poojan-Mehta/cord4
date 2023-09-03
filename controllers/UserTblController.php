@@ -139,6 +139,7 @@ class UserTblController extends Controller
         $model = UserTbl::findOne(['accessToken' => $accessToken, 'user_id'=> $user_id]);
         if(!empty($model)){
             $model->accessToken = '';
+            $model->user_status = 1;
             $model->save();
             Yii::$app->session->setFlash('success', 'Account activated successfully...');
             return $this->redirect(['view', 'user_id' => $model->user_id]);

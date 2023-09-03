@@ -12,6 +12,7 @@ use yii\grid\GridView;
 $this->title = 'User Tbls';
 $this->params['breadcrumbs'][] = $this->title;
 
+$userStatus = array(0 => "Inactive", 1 => "Active");
 $isLoggedId = false;
 $loginUserData = array();
 
@@ -38,6 +39,13 @@ if(array_key_exists('cord4',$_SESSION)){
             'username',
             'user_email:email',
             'user_mobile_no',
+            [
+                'label' => 'User Status',
+                'attribute' => 'user_status',
+                'value' => function ($model) use ($userStatus) {
+                    return $userStatus[$model->user_status];
+                },
+            ],
             $isLoggedId ? 
             [
                 'class' => ActionColumn::className(),
