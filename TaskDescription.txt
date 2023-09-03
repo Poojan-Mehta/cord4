@@ -37,4 +37,5 @@ cord4 / cord4
 
 Also Please find the attached SQL file.
 
-FYI: Due to medical emergency I've not started some points. Therefore I've taken around 5 hrs to perform above tasks. 
+FYI: Due to medical emergency I've not started some points. Therefore I've taken around 5 hrs to perform above tasks. Also we can do this task by following the standard way
+to use constants and many things.
